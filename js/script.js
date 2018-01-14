@@ -2,20 +2,11 @@
  * JS
  */
 
-/* eslint-disable */
-const brunch = new Set();
-brunch.add('Wes');
-brunch.add('Sarah');
-brunch.add('Simone');
+let dog1 = { name: 'Snickers', age: 3 };
+const dog2 = { name: 'Sunny', age: 1 };
 
-const line = brunch.values();
-console.log(line.next().value);
-console.log(line.next().value);
-brunch.add('Heather');
-brunch.add('Snickers');
-console.log(line.next().value);
-console.log(line.next().value);
-console.log(line.next().value);
+const weakSauce = new WeakSet([dog1, dog2]);
 
-
-
+console.log(weakSauce);
+dog1 = null;
+console.log(weakSauce);
