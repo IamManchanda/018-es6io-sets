@@ -3,17 +3,19 @@
  */
 
 /* eslint-disable */
-const people = new Set();
-people.add('Harry');
-people.add('Snickers');
-people.add('Kait');
+const brunch = new Set();
+brunch.add('Wes');
+brunch.add('Sarah');
+brunch.add('Simone');
 
-for (const person of people) {
-  console.log(person);
-}
+const line = brunch.values();
+console.log(line.next().value);
+console.log(line.next().value);
+brunch.add('Heather');
+brunch.add('Snickers');
+console.log(line.next().value);
+console.log(line.next().value);
+console.log(line.next().value);
 
-const students = new Set(['Wes', 'Kara', 'Tony']);
-const dogs = ['Snickers', 'Sunny']
-const dogSet = new Set(dogs);
 
 
